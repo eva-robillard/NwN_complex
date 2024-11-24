@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+<net id="net_example_2" type="RefNet">
+	<name>
+		<text>example_2</text>
+	</name>
+	<place id="p0_example_2">
+		<name>
+			<graphics>
+				<offset x="0" y="15"/>
+			</graphics>
+			<text>p0</text>
+		</name>
+	</place>
+	<place id="p1_example_2">
+		<name>
+			<graphics>
+				<offset x="0" y="15"/>
+			</graphics>
+			<text>p1</text>
+		</name>
+	</place>
+	<place id="p2_example_2">
+		<initialMarking>
+			<text>[]</text>
+		</initialMarking>
+		<name>
+			<graphics>
+				<offset x="0" y="15"/>
+			</graphics>
+			<text>p2</text>
+		</name>
+	</place>
+	<place id="p3_example_2">
+		<name>
+			<graphics>
+				<offset x="0" y="15"/>
+			</graphics>
+			<text>p3</text>
+		</name>
+	</place>
+	<transition id="t4_example_2">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("b")</text>
+		</uplink>
+	</transition>
+	<arc id="a12_example_2" source="p1_example_2" target ="t4_example_2">
+	</arc>
+	<arc id="a13_example_2" source="t4_example_2" target ="p0_example_2">
+	</arc>
+	<transition id="t5_example_2">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("!b")</text>
+		</uplink>
+	</transition>
+	<arc id="a14_example_2" source="p1_example_2" target ="t5_example_2">
+	</arc>
+	<arc id="a15_example_2" source="t5_example_2" target ="p1_example_2">
+	</arc>
+	<transition id="t6_example_2">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("a,b")</text>
+		</uplink>
+	</transition>
+	<arc id="a16_example_2" source="p2_example_2" target ="t6_example_2">
+	</arc>
+	<arc id="a17_example_2" source="t6_example_2" target ="p0_example_2">
+	</arc>
+	<transition id="t7_example_2">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("a,!b")</text>
+		</uplink>
+	</transition>
+	<arc id="a18_example_2" source="p2_example_2" target ="t7_example_2">
+	</arc>
+	<arc id="a19_example_2" source="t7_example_2" target ="p1_example_2">
+	</arc>
+	<transition id="t8_example_2">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("!a,!b")</text>
+		</uplink>
+	</transition>
+	<arc id="a20_example_2" source="p2_example_2" target ="t8_example_2">
+	</arc>
+	<arc id="a21_example_2" source="t8_example_2" target ="p2_example_2">
+	</arc>
+	<transition id="t9_example_2">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("!a,b")</text>
+		</uplink>
+	</transition>
+	<arc id="a22_example_2" source="p2_example_2" target ="t9_example_2">
+	</arc>
+	<arc id="a23_example_2" source="t9_example_2" target ="p3_example_2">
+	</arc>
+	<transition id="t10_example_2">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("a")</text>
+		</uplink>
+	</transition>
+	<arc id="a24_example_2" source="p3_example_2" target ="t10_example_2">
+	</arc>
+	<arc id="a25_example_2" source="t10_example_2" target ="p0_example_2">
+	</arc>
+	<transition id="t11_example_2">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("!a")</text>
+		</uplink>
+	</transition>
+	<arc id="a26_example_2" source="p3_example_2" target ="t11_example_2">
+	</arc>
+	<arc id="a27_example_2" source="t11_example_2" target ="p3_example_2">
+	</arc>
+	<transition id="t_end_0">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:end()</text>
+		</uplink>
+	</transition>
+	<arc id="a28_example_2" source="p0_example_2" target ="t_end_0">
+	</arc>
+	<transition id="t_end_1">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:end()</text>
+		</uplink>
+	</transition>
+	<arc id="a29_example_2" source="p2_example_2" target ="t_end_1">
+	</arc>
+</net>
+</pnml>

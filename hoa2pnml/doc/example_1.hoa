@@ -1,0 +1,46 @@
+HOA: v1
+name: "Fa & Fb & Fh & (!l U G(h & i & l))"
+States: 8
+Start: 4
+AP: 5 "a" "b" "h" "i" "l"
+acc-name: Buchi
+Acceptance: 1 Inf(0)
+properties: trans-labels explicit-labels state-acc deterministic
+properties: stutter-invariant very-weak
+--BODY--
+State: 0 {0}
+[2&3&4] 0
+State: 1
+[1&2&3&4] 0
+[!1&2&3&4] 1
+State: 2
+[2&3&4] 0
+[!4] 2
+State: 3
+[1&2&3&4] 0
+[!1&2&3&4] 1
+[1&!4] 2
+[!1&!4] 3
+State: 4
+[0&1&2&3&4] 0
+[0&!1&2&3&4] 1
+[0&1&!4] 2
+[0&!1&!4] 3
+[!0&!1&!4] 4
+[!0&1&2&3&4] 5
+[!0&1&!4] 6
+[!0&!1&2&3&4] 7
+State: 5
+[0&2&3&4] 0
+[!0&2&3&4] 5
+State: 6
+[0&2&3&4] 0
+[0&!4] 2
+[!0&2&3&4] 5
+[!0&!4] 6
+State: 7
+[0&1&2&3&4] 0
+[0&!1&2&3&4] 1
+[!0&1&2&3&4] 5
+[!0&!1&2&3&4] 7
+--END--

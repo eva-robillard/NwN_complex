@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+<net id="net_example_0" type="RefNet">
+	<name>
+		<text>example_0</text>
+	</name>
+	<place id="p2_example_0">
+		<name>
+			<graphics>
+				<offset x="0" y="15"/>
+			</graphics>
+			<text>p2</text>
+		</name>
+	</place>
+	<place id="p4_example_0">
+		<initialMarking>
+			<text>[]</text>
+		</initialMarking>
+		<name>
+			<graphics>
+				<offset x="0" y="15"/>
+			</graphics>
+			<text>p4</text>
+		</name>
+	</place>
+	<transition id="t7_example_0">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("a,b")</text>
+		</uplink>
+	</transition>
+	<arc id="a15_example_0" source="p4_example_0" target ="t7_example_0">
+	</arc>
+	<arc id="a16_example_0" source="t7_example_0" target ="p2_example_0">
+	</arc>
+	<transition id="t9_example_0">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("!a")</text>
+		</uplink>
+	</transition>
+	<arc id="a17_example_0" source="p4_example_0" target ="t9_example_0">
+	</arc>
+	<arc id="a18_example_0" source="t9_example_0" target ="p4_example_0">
+	</arc>
+	<transition id="t11_example_0">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:b("!b")</text>
+		</uplink>
+	</transition>
+	<arc id="a19_example_0" source="p4_example_0" target ="t11_example_0">
+	</arc>
+	<arc id="a20_example_0" source="t11_example_0" target ="p4_example_0">
+	</arc>
+	<transition id="t13_example_0">
+		<uplink>
+			<graphics>
+				<offset x="0" y="-18"/>
+			</graphics>
+			<text>:end()</text>
+		</uplink>
+	</transition>
+	<arc id="a21_example_0" source="p2_example_0" target ="t13_example_0">
+	</arc>
+</net>
+</pnml>
